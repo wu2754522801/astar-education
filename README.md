@@ -74,6 +74,19 @@ github
 * 学生端系统：https://github.com/wu2754522801/astar-education-student-ui
 * 后端系统：https://github.com/wu2754522801/astar-education
 
+# 环境部署
+
+### docker-compose快速部署
+```shell
+
+git clone https://gitee.com/wy521a/astar-education
+cd astar-education
+docker-compose up -d
+```
+教师端系统：ip:port:1025
+
+学生端系统：ip:port:1026
+
 # 系统展示
 
 * 学生考试系统
