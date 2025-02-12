@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.astar.education.mapper.TbExaminationPaperMapper">
+
+    <select id="getMonthTotal" resultType="com.astar.education.domain.dto.StatisticsDTO">
+        <![CDATA[
+            SELECT DAY(created_time) AS day,
+            COUNT(*)           AS count
+            FROM tb_questions_bank
+            WHERE created_time >= DATE(CONCAT(YEAR(CURDATE()), '-', MONTH(CURDATE()), '-01 00:00:00'))
+            AND created_time < DATE_ADD(DATE(CONCAT(YEAR(CURDATE()), '-', MONTH(CURDATE()), '-01')), INTERVAL 1 MONTH)
+            GROUP BY day
+            ORDER BY STR_TO_DATE(day, '%Y-%m-%d');
+        ]]>
+    </select>
+</mapper>

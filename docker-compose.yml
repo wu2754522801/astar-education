@@ -1,0 +1,61 @@
+version: '1'
+services:
+  # 数据库
+  astar-education-mysql:
+    build:
+      context: ./sql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    restart: always
+    container_name: astar-education-mysql
+    image: mysql:8.0
+    ports:
+     - 3308:3306
+    volumes:
+      - ./astar-education-mysql:/var/lib/mysql
+    command: --lower_case_table_names=1
+    network_mode: host
+  # 缓存
+  astar-education-redis:
+    container_name: astar-education-redis
+    image: redis:5.0.7
+    restart: always
+    ports:
+      - 6380:6379
+    network_mode: host
+  # 后端服务
+  astar-education-admin:
+    image: registry.cn-hangzhou.aliyuncs.com/astar/astar-education:V1.0.0
+    restart: always
+    container_name: astar-education-admin
+    ports:
+     - 8090:8090
+    depends_on:
+      - astar-education-mysql
+      - astar-education-redis
+    network_mode: host
+
+  # 教师端服务
+  astar-education-ui:
+    image: registry.cn-hangzhou.aliyuncs.com/astar/astar-education-ui:V1.0.0
+    restart: always
+    container_name: astar-education-ui
+    ports:
+     - 1024:80
+    depends_on:
+      - astar-education-admin
+    network_mode: host
+
+  # 学生端服务
+  astar-education-student-ui:
+    image: registry.cn-hangzhou.aliyuncs.com/astar/astar-education-student-ui:V1.0.0
+    restart: always
+    container_name: astar-education-student-ui
+    ports:
+      - 1025:80
+    depends_on:
+      - astar-education-admin
+    network_mode: host
+networks:
+  front:
+    driver: astar-education-network
