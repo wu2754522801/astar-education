@@ -18,6 +18,7 @@ create database `astar_education` default character set utf8mb4 collate utf8mb4_
 --
 -- Table structure for table `gen_table`
 --
+use astar_education;
 
 DROP TABLE IF EXISTS `gen_table`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;

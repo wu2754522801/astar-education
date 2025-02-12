@@ -2,15 +2,15 @@
 <p></p>
 
 <p align="center">
-<a href="https://gitee.com/wy521a/astra-education" target="_blank">
+<a href="https://gitee.com/wy521a/astar-education" target="_blank">
  <img src="./demo/logo/logo.png" height="80"/>
 <a/>
 </p>
 
 <div align="center">
 
-[![Gitee star](https://gitee.com/wy521a/astra-education/badge/star.svg)](https://gitee.com/wy521a/astra-education)
-[![Gitee fork](https://gitee.com/wy521a/astra-education/badge/fork.svg)](https://gitee.com/wy521a/astra-education)
+[![Gitee star](https://gitee.com/wy521a/astar-education/badge/star.svg)](https://gitee.com/wy521a/astar-education)
+[![Gitee fork](https://gitee.com/wy521a/astar-education/badge/fork.svg)](https://gitee.com/wy521a/astar-education)
 [![Github stars](https://img.shields.io/github/stars/wu2754522801/astar-education)](https://github.com/wu2754522801/astar-education)
 [![Github forks](https://img.shields.io/github/forks/wu2754522801/astar-education)](https://github.com/wu2754522801/astar-education)
 [![Github license](https://img.shields.io/github/license/wu2754522801/astar-education)](https://img.shields.io/github/license/wu2754522801/astar-education)
@@ -60,20 +60,19 @@
 
 # 演示地址
 
-* 教师端系统：http://124.221.91.143:1024
-* 学生端系统：http://124.221.91.143:1025
+* 教师端系统：http://124.221.91.143:1025
+* 学生端系统：http://124.221.91.143:1026
 
 # 仓库地址
 gitee
-* 教师端系统：https://gitee.com/wy521a/astra-education-ui
-* 学生端系统：https://gitee.com/wy521a/astra-education-student-ui
-* 后端系统：https://gitee.com/wy521a/astra-education
+* 教师端系统：https://gitee.com/wy521a/astar-education-ui
+* 学生端系统：https://gitee.com/wy521a/astar-education-student-ui
+* 后端系统：https://gitee.com/wy521a/astar-education
 
 github
 * 教师端系统：https://github.com/wu2754522801/astar-education-ui
 * 学生端系统：https://github.com/wu2754522801/astar-education-student-ui
 * 后端系统：https://github.com/wu2754522801/astar-education
-
 
 # 系统展示
 
